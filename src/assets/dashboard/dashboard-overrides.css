@@ -1,0 +1,320 @@
+/* Layout fixes so Canvas CSS works inside the React #root shell */
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  min-height: 100%;
+}
+
+.sign-in-page {
+  min-height: 100%;
+  width: 100%;
+  background-color: #f7f7f7;
+  color: #1b1b1b;
+  font-weight: normal;
+  font-family: "GT Standard", "Aptos", "TheSans", Helvetica, Arial;
+  font-size: 0.9em;
+}
+
+/* Desktop: content + right sidebar side-by-side */
+body.with-right-side #main.ic-Layout-columns {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 0;
+}
+
+body.with-right-side #not_right_side.ic-app-main-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto !important;
+  max-width: none !important;
+}
+
+body.with-right-side #content-wrapper,
+body.with-right-side #content.ic-Layout-contentMain {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box;
+  padding-right: 12px;
+}
+
+body.with-right-side #right-side-wrapper.ic-app-main-content__secondary {
+  flex: 0 0 280px;
+  width: 280px !important;
+  max-width: 280px;
+  box-sizing: border-box;
+  padding: 36px 24px 24px 8px;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  float: none !important;
+}
+
+/* Header: title + controls on one baseline */
+.ic-Dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: hsla(0, 0%, 100%, 0.95);
+}
+
+.ic-Dashboard-header__layout {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 4.5rem;
+  height: 4.5rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e8eaec;
+  padding: 0;
+  margin: 0;
+}
+
+.ic-Dashboard-header__title {
+  flex: 0 1 auto;
+  min-width: 0;
+  padding-right: 0;
+}
+
+.ic-Dashboard-header__title h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--ic-brand-font-color-dark, #000831);
+  white-space: nowrap;
+}
+
+.ic-Dashboard-header__actions {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: flex-end;
+  gap: 12px;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.ic-Dashboard-header__actions .Button {
+  margin: 0;
+  white-space: nowrap;
+  height: 38px;
+  box-sizing: border-box;
+}
+
+.dashboard-course-search {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  height: 38px;
+  border: 1px solid #c7cdd1;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fff;
+  width: 240px;
+  flex: 0 0 240px;
+  box-sizing: border-box;
+}
+
+.dashboard-course-search__input {
+  border: 0;
+  outline: none;
+  padding: 0 12px;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  font-size: 14px;
+  line-height: normal;
+  color: var(--ic-brand-font-color-dark, #000831);
+  background: transparent;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+}
+
+.dashboard-course-search__input::placeholder {
+  color: #6b7780;
+}
+
+.dashboard-course-search__button {
+  width: 38px;
+  flex: 0 0 38px;
+  height: 100%;
+  border: 0;
+  background: #355bd0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  padding: 0;
+}
+
+.dashboard-course-search__button:hover {
+  background: #3052bc;
+}
+
+.dashboard-course-search__button svg {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  flex-shrink: 0;
+}
+
+.dashboard-header-options {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border: 0;
+  background: transparent;
+  color: var(--ic-brand-font-color-dark, #000831);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.dashboard-header-options:hover {
+  background: #f2f4f4;
+}
+
+/* MU logo: same band as Dashboard header, vertically centered */
+.ic-sidebar-logo {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 4.5rem;
+  height: 4.5rem;
+  margin: 0 0 1.25rem !important;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.ic-sidebar-logo__image {
+  display: block !important;
+  max-width: 180px !important;
+  max-height: 70px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
+  /* Saved PNG has a black background; blend it out on the white sidebar */
+  mix-blend-mode: multiply;
+}
+
+/* Exactly 3 course cards per row on desktop */
+#DashboardCard_Container .ic-DashboardCard__box {
+  padding-top: 24px;
+}
+
+#DashboardCard_Container .ic-DashboardCard__box__container {
+  display: grid !important;
+  grid-template-columns: repeat(3, 262px);
+  justify-content: start;
+  gap: 36px;
+  margin: 0 !important;
+  width: 100%;
+}
+
+#DashboardCard_Container .ic-DashboardCard {
+  width: 262px !important;
+  max-width: 262px !important;
+  margin: 0 !important;
+  display: block !important;
+  vertical-align: top;
+}
+
+.ic-DashboardCard__header-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ic-DashboardCard__action svg {
+  display: block;
+}
+
+.todo-list-header,
+.recent_feedback h2 {
+  color: var(--ic-brand-font-color-dark, #000831);
+}
+
+.screenreader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media (max-width: 1200px) {
+  #DashboardCard_Container .ic-DashboardCard__box__container {
+    grid-template-columns: repeat(2, 262px);
+  }
+}
+
+@media (max-width: 1100px) {
+  body.with-right-side #main.ic-Layout-columns {
+    flex-direction: column;
+  }
+
+  body.with-right-side #right-side-wrapper.ic-app-main-content__secondary {
+    width: 100% !important;
+    max-width: none;
+    flex-basis: auto;
+    position: static;
+    padding: 0 24px 24px;
+  }
+
+  .ic-sidebar-logo {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-phone {
+    display: none !important;
+  }
+
+  .ic-Dashboard-header__layout {
+    height: auto;
+    min-height: 4.5rem;
+    flex-wrap: wrap !important;
+    padding: 12px 0;
+  }
+
+  .ic-Dashboard-header__actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap !important;
+  }
+
+  .dashboard-course-search {
+    width: 100%;
+    flex: 1 1 180px;
+  }
+
+  #DashboardCard_Container .ic-DashboardCard__box__container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

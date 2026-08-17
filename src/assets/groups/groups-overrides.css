@@ -1,0 +1,49 @@
+/* Groups / Current groups */
+
+.groups-page h2 {
+  margin: 0 0 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--ic-brand-font-color-dark, #000831);
+  line-height: 1.25;
+}
+
+.groups-page #current_groups_table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.groups-page #current_groups_table th {
+  font-weight: 700;
+  color: var(--ic-brand-font-color-dark, #000831);
+}
+
+.groups-page #current_groups_table td,
+.groups-page #current_groups_table th {
+  vertical-align: middle;
+}
+
+.groups-page #current_groups_table a {
+  color: var(--ic-link-color, #355bd0);
+  text-decoration: none;
+}
+
+.groups-page #current_groups_table a:hover {
+  text-decoration: underline;
+}
+
+.groups-page .group-course-name {
+  color: var(--ic-brand-font-color-dark, #000831);
+}
+
+.groups-page .course-list-group-column {
+  width: 28%;
+}
+
+.groups-page .course-list-course-title-column {
+  width: 52%;
+}
+
+.groups-page .course-list-term-column {
+  width: 20%;
+}

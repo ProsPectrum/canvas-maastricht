@@ -1,0 +1,11 @@
+/* Global left nav: more space between icons */
+
+.ic-app-header__menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.ic-app-header__menu-list-link:not(.ic-app-header__menu-list-link--nav-toggle) {
+  padding: 0.45rem 0;
+}

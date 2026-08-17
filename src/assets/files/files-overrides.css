@@ -1,0 +1,381 @@
+/* Files page layout on top of react_files CSS */
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  min-height: 100%;
+}
+
+body.files #wrapper.ic-Layout-wrapper {
+  margin-left: 84px;
+}
+
+body.files.primary-nav-collapsed #wrapper.ic-Layout-wrapper {
+  margin-left: 36px;
+}
+
+body.files #content.ic-Layout-contentMain {
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+body.files #right-side-wrapper {
+  display: none !important;
+}
+
+body.files .ic-app-nav-toggle-and-crumbs--files {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 8px 16px 8px 12px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e8eaec;
+  background: #fff;
+}
+
+body.files #courseMenuToggle {
+  display: none;
+}
+
+body.files #breadcrumbs {
+  margin: 0;
+}
+
+body.files #breadcrumbs ol {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.files #breadcrumbs .home {
+  display: none;
+}
+
+body.files #breadcrumbs li + li::before {
+  content: '>';
+  margin: 0 8px;
+  color: #6a7883;
+}
+
+body.files #breadcrumbs li.home + li::before {
+  content: none;
+  margin: 0;
+}
+
+body.files #breadcrumbs a {
+  color: #355bd0;
+  text-decoration: none;
+}
+
+body.files #breadcrumbs [aria-current='page'] .ellipsis {
+  color: #000831;
+}
+
+body.files .ef-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e8eaec;
+  background: #fff;
+}
+
+body.files .ef-search-form {
+  display: flex;
+  flex: 1 1 auto;
+  max-width: 28rem;
+  margin: 0;
+}
+
+body.files .ef-search-form .ic-Input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 2.375rem;
+  border: 1px solid #c7cdd1;
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+  padding: 0 12px;
+  line-height: 2.375rem;
+  box-sizing: border-box;
+}
+
+body.files .ef-search-form .Button {
+  height: 2.375rem;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #c7cdd1;
+  background: #f2f4f4;
+  padding: 0 12px;
+}
+
+body.files .ef-header__secondary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+body.files .ef-selected-count {
+  color: #273540;
+  white-space: nowrap;
+}
+
+body.files .ef-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+body.files .ef-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 2.375rem;
+  padding: 0 12px;
+  border: 1px solid #c7cdd1;
+  border-radius: 4px;
+  background: #f2f4f4;
+  color: #273540;
+  font-size: 0.95rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+body.files .ef-actions .btn-primary,
+body.files .ef-actions .btn-upload {
+  background: #000831;
+  border-color: #000831;
+  color: #fff;
+}
+
+body.files .ef-main {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 160px);
+}
+
+body.files .ef-folder-content {
+  flex: 0 0 260px;
+  width: 260px;
+  border-right: 1px solid #e8eaec;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+}
+
+body.files .ef-folder-list {
+  flex: 1 1 auto;
+  padding: 8px 0 12px;
+}
+
+body.files .tree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.files .tree .collectionViewItems,
+body.files .tree .subtrees,
+body.files .tree .treeContents {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.files .treeLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 8px;
+  color: #273540;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.35;
+}
+
+body.files .treeLabel:hover {
+  background: #f2f4f4;
+}
+
+body.files .treeLabel.selected,
+body.files .treeLabel.expanded.selected {
+  background: #e5f2f8;
+  font-weight: 700;
+}
+
+body.files .treeLabel .icon-mini-arrow-right {
+  display: inline-block;
+  width: 1rem;
+  text-align: center;
+  transition: transform 0.15s ease;
+  color: #6a7883;
+}
+
+body.files .treeLabel.expanded .icon-mini-arrow-right {
+  transform: rotate(90deg);
+}
+
+body.files .treeContents {
+  padding-left: 1.1rem;
+}
+
+body.files .ef-folder-quota {
+  margin-top: auto;
+  padding: 12px 14px 16px;
+  border-top: 1px solid #e8eaec;
+}
+
+body.files .progress-bar__bar-container {
+  height: 8px;
+  border-radius: 4px;
+  background: #e8eaec;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+body.files .progress-bar__bar {
+  height: 100%;
+  background: #0374b5;
+}
+
+body.files .ef-quota-text {
+  font-size: 0.8rem;
+  color: #6a7883;
+}
+
+body.files .ef-directory {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: auto;
+  background: #fff;
+  display: block !important;
+}
+
+body.files .FileUpload {
+  display: none;
+}
+
+body.files .ef-directory-header,
+body.files .ef-item-row {
+  display: grid;
+  grid-template-columns: 36px minmax(180px, 2.2fr) 1fr 1fr 1fr 0.7fr 72px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border-bottom: 1px solid #e8eaec;
+  min-height: 48px;
+}
+
+body.files .ef-directory-header {
+  min-height: 40px;
+  font-weight: 700;
+  color: #273540;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+body.files .ef-plain-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+body.files .ef-name-col a.ef-plain-link,
+body.files .ef-directory-header .ef-plain-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+body.files .ef-item-row:hover {
+  background: #f7f7f7;
+}
+
+body.files .ef-name-col__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #355bd0;
+  text-decoration: none;
+  min-width: 0;
+}
+
+body.files .ef-name-col__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.files .ef-big-icon-container {
+  flex: 0 0 36px;
+}
+
+body.files .ef-modified-by-col a {
+  color: #355bd0;
+  text-decoration: none;
+}
+
+body.files .ef-links-col {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+body.files .published-status {
+  border: 0;
+  background: transparent;
+  color: #03893d;
+  cursor: default;
+  padding: 0;
+}
+
+body.files .al-trigger {
+  border: 0;
+  background: transparent;
+  color: #6a7883;
+  cursor: pointer;
+  padding: 4px;
+}
+
+body.files .al-options {
+  display: none;
+}
+
+body.files .hidden-desktop {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  body.files .ef-main {
+    flex-direction: column;
+  }
+
+  body.files .ef-folder-content {
+    width: 100%;
+    max-height: 220px;
+  }
+
+  body.files .ef-directory-header,
+  body.files .ef-item-row {
+    grid-template-columns: 36px minmax(140px, 2fr) 1fr 72px;
+  }
+
+  body.files .ef-date-created-col,
+  body.files .ef-date-modified-col,
+  body.files .ef-modified-by-col {
+    display: none;
+  }
+}

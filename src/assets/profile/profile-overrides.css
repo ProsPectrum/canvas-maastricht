@@ -1,0 +1,242 @@
+/* Profile page layout: account left menu + main content */
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  min-height: 100%;
+}
+
+/* Canvas common.css reserves space for an absolutely positioned left menu.
+   We render #left-side in flex flow, so clear that reserved margin. */
+body.with-left-side #main.ic-Layout-columns {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body.with-left-side #left-side.ic-app-course-menu {
+  flex: 0 0 192px;
+  width: 192px !important;
+  max-width: 192px;
+  box-sizing: border-box;
+  display: block !important;
+  position: sticky;
+  top: 0;
+  align-self: stretch;
+  float: none !important;
+  margin: 0 !important;
+  padding: 12px 0 24px;
+  border-right: none;
+}
+
+body.with-left-side.course-menu-collapsed #left-side.ic-app-course-menu {
+  display: none !important;
+}
+
+body.with-left-side #not_right_side.ic-app-main-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  float: none !important;
+}
+
+body.with-left-side #content-wrapper,
+body.with-left-side #content.ic-Layout-contentMain {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box;
+}
+
+body.with-left-side #content.ic-Layout-contentMain {
+  padding: 24px 36px 48px !important;
+}
+
+body.with-left-side #right-side-wrapper.ic-app-main-content__secondary {
+  display: none !important;
+}
+
+/* Crumbs bar: hamburger + title aligned like Canvas */
+body.profile .ic-app-nav-toggle-and-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 8px 16px 8px 12px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e8eaec;
+  background: #fff;
+}
+
+body.profile #courseMenuToggle {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 4px 8px;
+  color: #355bd0;
+}
+
+body.profile #breadcrumbs {
+  margin: 0;
+}
+
+body.profile #breadcrumbs ol {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.profile #breadcrumbs .home {
+  display: none;
+}
+
+body.profile #breadcrumbs .ellipsible {
+  color: #000831;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Account section tabs */
+body.profile #section-tabs {
+  margin: 0;
+  padding: 8px 0 0;
+  list-style: none;
+}
+
+body.profile #section-tabs li {
+  margin: 0;
+}
+
+body.profile #section-tabs a {
+  display: block;
+  padding: 6px 12px 6px 16px;
+  border-left: 3px solid transparent;
+  color: #355bd0;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+body.profile #section-tabs a.active,
+body.profile #section-tabs a[aria-current='page'] {
+  border-left-color: #273540;
+  border-left-width: 3px;
+  color: #273540;
+  font-weight: 700;
+}
+
+/* Profile primary layout */
+body.profile .ic-Profile-layout > h1 {
+  margin: 0 0 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000831;
+}
+
+body.profile .header-block.legacy {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  margin: 0;
+}
+
+body.profile .header-block.legacy .account-info-block {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 20px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+body.profile .profile-avatar-wrapper {
+  flex: 0 0 auto;
+  width: 128px !important;
+  height: auto !important;
+  align-items: center;
+}
+
+body.profile .profile-avatar-wrapper .avatar {
+  display: block;
+  width: 128px !important;
+  height: 128px !important;
+  border-radius: 50%;
+  background-color: #f2f4f4;
+  background-size: cover;
+  background-position: center;
+}
+
+body.profile #profile-edit-link {
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+body.profile #edit_profile_form {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+}
+
+body.profile .profileContent__Block > h2 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000831;
+  line-height: 1.2;
+}
+
+body.profile .profileHeader {
+  margin: 16px 0 4px;
+  padding: 0 !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000831;
+  line-height: 1.3;
+}
+
+body.profile .profileContent__Block p {
+  margin: 0 0 4px;
+  color: #273540;
+  line-height: 1.45;
+}
+
+body.profile .button-area-block {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  height: auto !important;
+}
+
+body.profile .button-area-block .Button {
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  body.with-left-side #main.ic-Layout-columns {
+    flex-direction: column;
+  }
+
+  body.with-left-side #left-side.ic-app-course-menu {
+    flex: 0 0 auto;
+    width: 100% !important;
+    max-width: none;
+    position: static;
+  }
+
+  body.profile .header-block.legacy,
+  body.profile .header-block.legacy .account-info-block {
+    flex-direction: column !important;
+  }
+}

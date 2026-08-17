@@ -1,0 +1,48 @@
+.course-modules-page {
+  max-width: 42rem;
+  padding: 0.25rem 0 2rem;
+}
+
+.course-modules-page__title {
+  margin: 0 0 1.25rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3b45;
+  line-height: 1.25;
+}
+
+.course-modules-empty {
+  padding: 1.5rem 1.25rem;
+  border: 1px solid #c7cdd1;
+  border-radius: 0.25rem;
+  background: #f5f5f5;
+}
+
+.course-modules-empty p {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #2d3b45;
+}
+
+.course-modules-empty p:last-child {
+  margin-bottom: 0;
+}
+
+.course-modules-empty__back {
+  margin-top: 1rem !important;
+}
+
+.course-modules-empty__back a {
+  color: #355bd0;
+  text-decoration: none;
+}
+
+.course-modules-empty__back a:hover,
+.course-modules-empty__back a:focus {
+  text-decoration: underline;
+}
+
+body.context_modules.modules #right-side-wrapper {
+  display: none !important;
+}

@@ -1,0 +1,101 @@
+/* Assignment show — match Canvas student view */
+
+.course-assignment-show {
+  padding-bottom: 2rem;
+}
+
+.course-assignment-show .assignment-title {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 992px) {
+  .course-assignment-show .assignment-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .course-assignment-show .title-content {
+    flex: 1;
+    min-width: 1px;
+  }
+
+  .course-assignment-show .title-content .title {
+    margin: 0;
+  }
+
+  .course-assignment-show .assignment-buttons {
+    padding-left: 18px;
+    text-align: right;
+  }
+}
+
+.course-assignment-show .title-content .title {
+  margin: 0 0 12px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #000831;
+  word-wrap: break-word;
+}
+
+.course-assignment-show .assignment-buttons .Button--primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.375rem;
+  padding: 0 1rem;
+  margin: 0.125rem;
+  border: 0;
+  border-radius: 3px;
+  background: #000831;
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.course-assignment-show .assignment-buttons .Button--primary:hover {
+  background: #12204a;
+}
+
+.course-assignment-show .student-assignment-overview {
+  list-style: none;
+  box-sizing: border-box;
+  border-top: 1px solid #e8eaec;
+  border-bottom: 1px solid #e8eaec;
+  padding: 12px 0;
+  margin: 0 0 18px;
+}
+
+.course-assignment-show .student-assignment-overview li {
+  display: inline-block;
+}
+
+.course-assignment-show .student-assignment-overview .title {
+  font-weight: bold;
+  padding-right: 0.5em;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #2d3b45;
+}
+
+.course-assignment-show .student-assignment-overview .value {
+  padding-right: 2em;
+  font-size: 1rem;
+  color: #2d3b45;
+}
+
+.course-assignment-show .description {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #2d3b45;
+}
+
+.course-assignment-show .description p {
+  margin: 0;
+}
+
+body.assignments #right-side-wrapper {
+  display: none !important;
+}

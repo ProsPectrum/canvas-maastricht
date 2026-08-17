@@ -1,0 +1,802 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sign-in-page {
+    height: 100%;
+    width: 100%;
+    background-color: #f7f7f7;
+    color: #1b1b1b;
+    font-weight: normal;
+    font-family: "GT Standard", "Aptos", "TheSans", Helvetica, Arial;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.sign-in-page .body, .sign-in-page {
+    font-size: 0.9em;
+}
+
+.sign-in-page #noScript {
+    margin: 16px;
+    color: Black;
+}
+
+:lang(en-GB) {
+    quotes: '\2018' '\2019' '\201C' '\201D';
+}
+
+:lang(zh) {
+    font-family: 微软雅黑;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@-webkit-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+/* Theme layout styles */
+
+.sign-in-page #fullPage {
+    position: absolute;
+    bottom: 28px;
+    top: 0px;
+    width: 100%;
+}
+
+.sign-in-page #brandingWrapper {
+    background-color: #f7f7f7;
+    height: 100%;
+    width: 100%;
+}
+
+.sign-in-page #branding {
+    /* A background image will be added to the .sign-in-page #branding element at run-time once the illustration image is configured in the theme. 
+       Recommended image dimensions: 1420x1200 pixels, JPG or PNG, 200 kB average, 500 kB maximum. */
+    display: none;
+}
+
+.sign-in-page #brandingTint {
+    /* This will define a tint to be overlaid on top of the illustration background image. */
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.sign-in-page #contentWrapper {
+    background-color: transparent;
+    height: 0px;
+    width: 100%;
+}
+
+.sign-in-page #content {
+    /* Set content to center */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: #fff;
+
+    /* Set size margins */
+    margin-bottom: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 235px;
+    min-width: 320px;
+    max-width: 412px;
+    width: 338px; /*calc(100% - 40px); */
+    height: auto;
+    padding: 44px;
+   
+    /* Add drop shadow */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+    /* Allow Scrolling */
+    overflow-y: auto;
+    max-height: 80%;
+}
+
+.sign-in-page #header {
+    font-size: 2em;
+    font-weight: lighter;
+    font-family: "GT Standard", "Aptos", "TheSans", Helvetica, Arial;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    height: 36px;
+    width: 338px;
+    background-color: transparent;
+}
+
+    .sign-in-page #header img {
+        /* Logo image recommended dimension: 108x24  or 338x24 (elongated), 4 kB average, 10 kB maximum. Transparent PNG strongly recommended. */
+        width: auto;
+        height: 100%;
+        position: relative;
+    }
+
+.sign-in-page #loginMessage {
+    box-sizing: border-box;
+    color: rgb(0, 8, 48);
+    direction: ltr;
+    display: block;
+    font-family: "GT Standard", "Aptos", "TheSans", Helvetica, Arial;
+    font-weight: 600;
+    font-size: 1.4rem;
+    height: auto;
+    line-height: 28px;
+    margin-bottom: 16px;
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-top: 16px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-align: left;
+    text-size-adjust: 100%;
+    width: 342px;
+    background-color: transparent;
+}
+
+.sign-in-page #loginForm {
+    width: 338px;
+}
+
+.sign-in-page #workArea, .sign-in-page #header {
+    word-wrap: break-word;
+}
+
+.sign-in-page #workArea {
+    margin-bottom: 4%;
+    margin-top: 22px;
+    background-color: transparent;
+}
+
+.sign-in-page #footerPlaceholder {
+    height: 0px;
+}
+
+.sign-in-page #footer {
+    display: none;
+}
+
+.sign-in-page #footerLinks {
+    padding-left: 10px;
+}
+
+.sign-in-page #copyright {
+    display: none;
+}
+
+.sign-in-page #userNameArea, .sign-in-page #passwordArea {
+    box-sizing: border-box;
+    color: rgb(38, 38, 38);
+    direction: ltr;
+    display: block;
+    font-family: "GT Standard", "Aptos", "TheSans", Helvetica, Arial;
+    font-size: 15px;
+    font-weight: normal;
+    height: 52px;
+    line-height: 20px;
+    margin-left: 0px;
+    margin-right: -2px;
+    text-align: left;
+    text-size-adjust: 100%;
+    width: 342px;
+}
+
+.sign-in-page #updatePasswordForm #submitButton, #cancelButton {
+    width: 48%;
+} 
+
+.sign-in-page #oldPasswordArea, .sign-in-page #newPasswordArea {
+    margin-bottom: 7px;
+}
+
+.sign-in-page #errorMessage{
+    margin-top: 5px;
+}
+
+.pageLink {
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    direction: ltr;
+    display: inline-block;
+    font-family: "GT Standard", "Aptos", "TheSans", Helvetica, Arial;
+    font-size: 12px;
+    font-weight: normal;
+    height: 28px;
+    line-height: 28px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: left;
+    text-size-adjust: 100%;
+    text-decoration: underline;
+}
+
+/* Common content styles */
+
+.clear {
+    clear: both;
+}
+
+.float {
+    float: left;
+}
+
+.floatReverse {
+    float: right;
+}
+
+.indent {
+    margin-left: 16px;
+}
+
+.indentNonCollapsible {
+    padding-left: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
+.notHidden {
+    display: inherit;
+}
+
+.error {
+    color: #e81123;
+}
+
+.actionLink {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.sign-in-page a {
+    color: #0067b8;
+    text-decoration: none;
+    background-color: transparent;
+    word-wrap: normal;
+}
+
+.sign-in-page ul {
+    list-style-type: disc;
+}
+
+.sign-in-page ul, .sign-in-page ol, .sign-in-page dd {
+    padding: 0 0 0 16px;
+}
+
+.sign-in-page h1, .sign-in-page h2, .sign-in-page h3, .sign-in-page h4, .sign-in-page h5, .sign-in-page label {
+    margin-bottom: 8px;
+}
+
+.submitMargin {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.topFieldMargin {
+    margin-top: 8px;
+}
+
+.fieldMargin {
+    margin-bottom: 8px;
+}
+
+.groupMargin {
+    margin-bottom: 0px;
+}
+
+.sectionMargin {
+    margin-bottom: 64px;
+}
+
+.block {
+    display: block;
+}
+
+.autoWidth {
+    width: auto;
+}
+
+.fullWidth {
+    width: 342px;
+}
+
+.fullWidthIndent {
+    width: 326px;
+}
+
+.smallTopSpacing {
+    margin-top: 15px;
+}
+
+.mediumTopSpacing {
+    margin-top: 25px;
+}
+
+.largeTopSpacing {
+    margin-top: 35px;
+}
+
+.smallBottomSpacing {
+    margin-bottom: 5px;
+}
+
+.mediumBottomSpacing {
+    margin-bottom: 15px;
+}
+
+.largeBottomSpacing {
+    margin-bottom: 25px;
+}
+
+.sign-in-page #openingMessage {
+    margin-bottom: 4px;
+}
+
+.sign-in-page input {
+    max-width: 100%;
+    font-family: inherit;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.sign-in-page input[type="radio"], input[type="checkbox"] {
+    vertical-align: middle;
+    margin-bottom: 2px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+    .sign-in-page span.submit, .sign-in-page button.submit, input[type="submit"] {
+        align-items: flex-start;
+        background-color: rgb(15, 157, 88);
+        border: none;
+        box-sizing: border-box;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        direction: ltr;
+        display: inline-block;
+        font-family: "GT Standard", "Aptos", "TheSans", Helvetica, Arial;
+        font-size: 15px;
+        font-stretch: normal;
+        font-style: normal;
+        font-variant-caps: normal;
+        font-variant-ligatures: normal;
+        font-variant-numeric: normal;
+        font-weight: normal;
+        min-height: 32px;
+        letter-spacing: normal;
+        line-height: 25px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        max-width: 100%;        
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding-bottom: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+        position: relative;
+        text-align: center;
+        text-indent: 0px;
+        text-overflow: ellipsis;
+        text-rendering: auto;
+        text-shadow: none;
+        text-size-adjust: 100%;
+        touch-action: manipulation;
+        user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        width: 100%;
+        word-spacing: 0px;
+        writing-mode: horizontal-tb;
+        -webkit-appearance: none;
+        -webkit-rtl-ordering: logical;
+        -webkit-border-image: none;
+    }
+
+    input[type="submit"]:hover, .sign-in-page span.submit:hover, .sign-in-page button.submit:hover {
+        /* background: rgb(190, 221, 247); */
+        background: rgb(217, 255, 214);
+        color: rgb(0, 8, 48);
+    }    
+
+
+input.text {
+    background-color: rgba(255, 255, 255, 0.4);
+    background-image: none;
+    border-bottom-color: rgba(0, 0, 0, 0.6);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-sizing: border-box;
+    color: rgb(38, 38, 38);
+    cursor: auto;
+    direction: ltr;
+    display: block;
+    font-family: "GT Standard", "Aptos", "TheSans", Helvetica, Arial;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: normal;
+    height: 36px;
+    letter-spacing: normal;
+    line-height: 20px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    max-width: 100%;
+    outline-color: rgb(38, 38, 38);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 6px;
+    padding-left: 0px;
+    padding-right: 10px;
+    padding-top: 6px;
+    text-align: start;
+    text-indent: 0px;
+    text-rendering: auto;
+    text-shadow: none;
+    text-size-adjust: 100%;
+    text-transform: none;
+    user-select: text;
+    width: 338px;
+    word-spacing: 0px;
+    writing-mode: horizontal-tb;
+    -webkit-appearance: none;
+    -webkit-locale: "en";
+    -webkit-rtl-ordering: logical;
+    -webkit-border-image: none;
+}
+
+input.text:focus {
+    border: 1px solid #0067B8;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.sign-in-page select {
+    height: 28px;
+    min-width: 60px;
+    max-width: 100%;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: none;
+    padding: 2px;
+    font-family: inherit;
+}
+
+.sign-in-page h1, .sign-in-page .giantText {
+    font-size: 2.0em;
+    font-weight: lighter;
+}
+
+.sign-in-page h2, .sign-in-page .bigText {
+    font-size: 1.33em;
+    font-weight: lighter;
+}
+
+.sign-in-page h3, .sign-in-page .normalText {
+    font-size: 1.0em;
+    font-weight: normal;
+}
+
+.sign-in-page h4, .sign-in-page .smallText {
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.sign-in-page h4 {
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+.sign-in-page h5, .sign-in-page .tinyText {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.hint {
+    color: #999999;
+}
+
+.emphasis {
+    font-weight: 700;
+    color: #2F2F2F;
+}
+
+.smallIcon {
+    height: 20px;
+    padding-right: 12px;
+    vertical-align: middle;
+}
+
+.largeIcon {
+    height: 48px;
+    /* width:48px; */
+    vertical-align: middle;
+}
+
+.largeTextNoWrap {
+    height: 48px;
+    display: table-cell; /* needed when in float*/
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: 1.2em;
+}
+
+.idp {
+    height: 48px;
+    clear: both;
+    padding: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+    .idp:hover {
+        background-color: #cccccc;
+        cursor: pointer;
+    }
+
+.idpDescription {
+    width: 80%;
+    cursor: pointer;
+}
+
+.identityBanner{
+    color: black;
+    text-align: left;
+    white-space: nowrap;
+    line-height: 28px;
+    height: 28px;
+    font-family: "GT Standard", "Aptos", "TheSans", Helvetica, Arial;
+    font-size: 15px;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.submit.backButton{
+    color: black;
+    width: 108px;
+    float: left;
+    background: #CCCCCC;
+    border-color: #CCCCCC;
+    margin-left: -2px;
+    height: 32px;
+    position: relative;
+    left:110px;
+    bottom:17px;
+}
+  
+    input[type="submit"].backButton:hover, .sign-in-page span.submit.backButton:hover {
+        background: #AAA;
+        border: 1px solid #AAA;
+    }
+
+.submit.nextButton{
+    margin-left: -2px;
+    left:229px;
+    bottom:-40px;
+    height: 32px;
+    width: 108px;
+}
+
+.submit.modifiedSignIn{
+    display: block;
+    width: auto;
+    position: relative;
+    height: 32px;
+    width: 108px;
+    left:229px;
+    bottom:-15px;
+}
+
+.sign-in-page #submissionArea{
+    margin-top: 15px;
+}
+
+@media (max-width: 600px), (max-height: 392px){
+    .sign-in-page #content {
+        /* Set content to center */
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        background-color: #fff;
+        /* Set size margins */
+        margin-bottom: 28px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 290px;
+        min-width: 320px;
+        max-width: 412px;
+        width: calc(100% - 40px);
+        height: auto;
+        padding: 23px 18px 0px 18px;
+        /* Add drop shadow */
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+        border: 0px solid rgba(0,0,0,0);
+
+        /* Allow Scrolling */
+        overflow-y: initial;
+        max-height: initial;
+    }
+
+    .sign-in-page #footer {
+        background-color: rgba(0, 0, 0, 0.6);
+        bottom: 0px;
+        box-sizing: border-box;
+        clear: both;
+        color: rgb(38, 38, 38);
+        direction: ltr;
+        display: block;
+        filter: none;
+        font-family: "GT Standard", "Aptos", "TheSans", Helvetica, Arial;
+        font-size: 15px;
+        font-weight: normal;
+        height: 28px;
+        line-height: 20px;
+        overflow-x: visible;
+        overflow-y: visible;
+        position: fixed;
+        text-align: left;
+        text-size-adjust: 100%;
+        width: 100%;
+    }
+
+    .sign-in-page #brandingWrapper {
+        display: none;
+    }
+
+    input.text {
+        font-size: 16px;
+    }
+    
+    .identityBanner {
+        margin:16px 0px;
+        padding:0px 80px 0px 40px;    
+    }
+    
+    .identityBannerImage {
+        left: -50px;   
+    }
+}
+
+/* Targets displays using any of Windows’ High Contrast Mode themes: */
+@media screen and (-ms-high-contrast: active) {
+    textarea::-webkit-input-placeholder {
+        color: #00FF00;
+    }
+
+    textarea:-moz-placeholder { /* Firefox 18- */
+        color: #00FF00;
+    }
+
+    textarea::-moz-placeholder { /* Firefox 19+ */
+        color: #00FF00;
+    }
+
+    textarea:-ms-input-placeholder {
+        color: #00FF00;
+    }
+}
+
+/* Targets displays using the Windows’ "High Contrast Black" theme: */
+@media screen and (-ms-high-contrast: white-on-black) {
+    .sign-in-page #contentWrapper {
+        background-color: #000000;
+        color: #ffffff;
+    }
+    .idp:hover {
+        background-color: #ffffff;
+        color: #000000;
+    }
+    .sign-in-page #brandingWrapper {
+        background-color: #000000;
+        color: #ffffff;
+    }
+    html, body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    textarea::-webkit-input-placeholder {
+        color: #ffffff;
+    }
+
+    textarea:-moz-placeholder { /* Firefox 18- */
+        color: #ffffff;
+    }
+
+    textarea::-moz-placeholder { /* Firefox 19+ */
+        color: #ffffff;
+    }
+
+    textarea:-ms-input-placeholder {
+        color: #ffffff;
+    }
+}
+
+/* Targets displays using the Windows’ "High Contrast White" theme: */
+@media screen and (-ms-high-contrast: black-on-white) {
+    .sign-in-page #contentWrapper {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .idp:hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .sign-in-page #brandingWrapper {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    html, body {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    textarea::-webkit-input-placeholder {
+        color: #000000;
+    }
+
+    textarea:-moz-placeholder { /* Firefox 18- */
+        color: #000000;
+    }
+
+    textarea::-moz-placeholder { /* Firefox 19+ */
+        color: #000000;
+    }
+
+    textarea:-ms-input-placeholder {
+        color: #000000;
+    }
+}

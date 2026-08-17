@@ -1,0 +1,214 @@
+/* Search page shell + Atomic Search start screen tweaks */
+
+body.search-page #wrapper,
+body.search-page .ic-Layout-wrapper,
+body.search-page .ic-Layout-columns,
+body.search-page .ic-app-main-content,
+body.search-page .ic-Layout-contentWrapper,
+body.search-page .ic-Layout-contentMain {
+  height: 100%;
+}
+
+body.search-page .ic-Layout-contentMain {
+  padding: 0;
+}
+
+.search-page-root {
+  min-height: calc(100vh - 0px);
+  background: #fff;
+}
+
+.search-page-root .aj-search-start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 36rem;
+  width: 100%;
+  margin: 40px auto 0;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+}
+
+.search-page-root .aj-title {
+  font-size: 1.75rem;
+  color: #1f2937;
+  font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  margin: 0 0 1.25rem;
+  text-align: center;
+}
+
+.search-page-root .aj-search-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.search-page-root .aj-search--large {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.search-page-root .aj-search__form {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0;
+}
+
+.search-page-root .aj-search--large input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 2.75rem;
+  font-size: 1rem;
+  line-height: 2.75rem;
+  padding: 0 2.75rem 0 0.9rem;
+  border: 0;
+  border-radius: 0.35rem;
+  background: #f3f4f6;
+  color: #1f2937;
+  font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  outline: none;
+  box-shadow: none;
+  margin: 0 !important;
+  vertical-align: top;
+}
+
+.search-page-root .aj-search--large input::placeholder {
+  color: #9ca3af;
+}
+
+.search-page-root .aj-search--large input:focus {
+  box-shadow: 0 0 0 2px rgba(55, 94, 210, 0.25);
+}
+
+.search-page-root .aj-search-btn--large {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.search-page-root .aj-search-btn--large:hover {
+  color: #4f5a69;
+}
+
+.search-page-root .aj-search-btn--large svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+}
+
+.search-page-root .aj-close-btn--large {
+  position: absolute;
+  top: 0;
+  right: 2.75rem;
+  width: 2.25rem;
+  height: 2.75rem;
+  border: 0;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.search-page-root .aj-close-btn--large.is-visible {
+  display: inline-flex;
+}
+
+.search-page-root .aj-close-btn--large svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.search-page-root .aj-search-controls-toggle {
+  flex: 0 0 2.75rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.35rem;
+  background: #fff;
+  color: #4b5563;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.search-page-root .aj-search-controls-toggle:hover,
+.search-page-root .aj-search-controls-toggle.is-open {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.search-page-root .aj-search-controls-toggle svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: currentColor;
+}
+
+.search-page-root .aj-search-controls {
+  margin: 1rem 0 0;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.35rem;
+  background: #fafafa;
+  color: #6b7280;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.search-page-root .aj-search-results {
+  margin: 1.5rem 0 0;
+  width: 100%;
+  color: #6b7280;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+@media (max-width: 649px) {
+  .search-page-root .aj-title {
+    font-size: 1.5rem;
+  }
+
+  .search-page-root .aj-search--large input {
+    height: 2.5rem;
+    font-size: 0.95rem;
+    padding-right: 2.5rem;
+  }
+
+  .search-page-root .aj-search-btn--large,
+  .search-page-root .aj-search-controls-toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-basis: 2.5rem;
+  }
+
+  .search-page-root .aj-close-btn--large {
+    height: 2.5rem;
+    right: 2.5rem;
+  }
+}

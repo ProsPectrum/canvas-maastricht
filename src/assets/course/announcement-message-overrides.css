@@ -1,0 +1,191 @@
+/* Announcement message / discussion topic detail */
+
+.announcement-message-page {
+  max-width: 100%;
+}
+
+.announcement-message-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+}
+
+.announcement-message-toolbar__left,
+.announcement-message-toolbar__right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.announcement-message-btn,
+.announcement-message-reply {
+  display: inline-flex;
+  align-items: center;
+  height: 2.25rem;
+  padding: 0 0.85rem;
+  border: 1px solid #c7cdd1;
+  border-radius: 0.25rem;
+  background: #fff;
+  color: #2d3b45;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.announcement-message-btn:hover,
+.announcement-message-reply:hover {
+  background: #f5f5f5;
+}
+
+.announcement-message-reply {
+  background: #000831;
+  border-color: #000831;
+  color: #fff;
+}
+
+.announcement-message-reply:hover {
+  background: #12204a;
+  filter: none;
+}
+
+.announcement-message-select select,
+.announcement-message-search input {
+  height: 2.25rem;
+  border: 1px solid #c7cdd1;
+  border-radius: 0.25rem;
+  background: #fff;
+  color: #2d3b45;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+
+.announcement-message-select select {
+  min-width: 7.5rem;
+  padding: 0 1.75rem 0 0.65rem;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #6b7380 50%),
+    linear-gradient(135deg, #6b7380 50%, transparent 50%);
+  background-position: calc(100% - 12px) calc(50% - 2px),
+    calc(100% - 7px) calc(50% - 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.announcement-message-search input {
+  min-width: 14rem;
+  padding: 0 0.75rem;
+  line-height: 2.25rem;
+  box-sizing: border-box;
+}
+
+.announcement-message-card {
+  padding: 0.25rem 0 1.5rem;
+}
+
+.announcement-message-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.announcement-message-author {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.announcement-message-author__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.announcement-message-author__name {
+  font-weight: 700;
+  color: #355bd0;
+  font-size: 1rem;
+}
+
+.announcement-message-pills {
+  display: flex;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.announcement-message-pills li {
+  padding: 0.1rem 0.45rem;
+  border-radius: 0.2rem;
+  background: #e8eaec;
+  color: #2d3b45;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.announcement-message-posted {
+  margin: 0.2rem 0 0;
+  font-size: 0.875rem;
+  color: #6b7380;
+}
+
+.announcement-message-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  background: transparent;
+  color: #2d3b45;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.announcement-message-more:hover {
+  background: #f5f5f5;
+}
+
+.announcement-message-title {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #2d3b45;
+}
+
+.announcement-message-body p {
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #2d3b45;
+  white-space: pre-line;
+}
+
+.announcement-message-actions {
+  margin-top: 1rem;
+}
+
+body.discussion-topic-page #right-side-wrapper {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .announcement-message-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .announcement-message-search input {
+    min-width: 0;
+    width: 100%;
+  }
+}

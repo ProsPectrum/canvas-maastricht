@@ -1,0 +1,118 @@
+/* Courses / All courses page */
+
+.courses-page .page_header_container {
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+  column-gap: 15px;
+}
+
+@media (max-width: 1024px) {
+  .courses-page .page_header_container {
+    margin-bottom: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.courses-page .page_header {
+  font-size: 2.375rem;
+  margin: 0;
+  font-weight: 700;
+  color: var(--ic-brand-font-color-dark, #000831);
+  line-height: 1.2;
+}
+
+@media (max-width: 991px) {
+  .courses-page .page_header {
+    font-size: 1.75rem;
+  }
+}
+
+.courses-page .ajas-search {
+  display: flex;
+  align-items: center;
+  max-width: 360px;
+  width: 100%;
+  height: 38px;
+  border: 1px solid #c7cdd1;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.courses-page .ajas-search__input {
+  flex: 1;
+  border: 0;
+  margin: 0;
+  padding: 0 12px;
+  height: 100%;
+  font-size: 1rem;
+  line-height: normal;
+  color: var(--ic-brand-font-color-dark, #000831);
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  min-width: 0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.courses-page .ajas-search__input::placeholder {
+  color: #6a7883;
+}
+
+.courses-page .ajas-search__button {
+  flex: 0 0 42px;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: #355bd0;
+  color: #fff;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.courses-page .ajas-search__button:hover {
+  background: #2a4bb0;
+}
+
+.courses-page .ajas-search__button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  display: block;
+}
+
+.courses-page .course-list-table .course-list-column-header a {
+  cursor: pointer;
+}
+
+.courses-page .course-list-table .course-list-sort-icon.sorted {
+  color: #2b7abc;
+}
+
+.courses-page .course-list-favoritable {
+  cursor: pointer;
+}
+
+.courses-page .course-list-favoritable:focus {
+  outline: thin dotted #333;
+  outline-offset: 2px;
+}
+
+.courses-page .course-list-table a .name {
+  color: var(--ic-link-color, #355bd0);
+}
+
+.courses-page .content--hasMarginTop {
+  margin-top: 0;
+}
